@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  collections:
+  - netapp.ontap
+  tasks:
+  - name: tasks
+    na_ontap_info:
+      state: info
+      hostname: 100.110.20.35
+      https: true
+      validate_certs: false
+      username: admin
+      password: “{{ netapp_password }}”
